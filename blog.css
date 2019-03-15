@@ -1,0 +1,22 @@
+body {
+  background-color: coral;
+}
+
+h3 {
+  background-color:blue;
+  font-size: 35px;
+  font-family:"Impact";
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  
+}
+.Courier{
+  font-family:Courier;
+}
+h1{
+  font-size: 45px;
+  font-family:"Courier";
+ 
+}

@@ -1,0 +1,39 @@
+body{
+  background-image:url("https://ak4.picdn.net/shutterstock/videos/8613364/thumb/3.jpg");
+}
+#surprise {
+  color: white;
+  font-family:fantasy;
+  font-size:80px;
+  margin-left: 1.5em;
+  margin-top:.25em;
+}
+#party {
+  color: white;
+  font-family:fantasy;
+  font-size:80px;
+  margin-left: 2.5em;
+  margin-top:.01em;}
+ 
+img{
+  position:absolute;
+  top: 105px;
+  left: 850px;
+  width:350px;
+  border: 7px groove blue;
+}
+h3{
+  border: 9px dotted red;
+  margin-top: 35px;
+  margin-bottom: 100px;
+  margin-right: 133px;
+  margin-left: 250px;
+  background-color: lightblue;
+width:40%;
+font-family:courier;
+font-size:2.2em;
+color: darkgreen
+}
+hr{
+  color:black;
+}

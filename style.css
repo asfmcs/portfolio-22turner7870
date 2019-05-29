@@ -32,18 +32,18 @@ body {
 
 /* Style the content */
 .content {
-  background-color:darkgrey;
+  background-color:chartreuse;
   padding: 10px;
   height: 200px; /* Should be removed. Only for demonstration */
 }
 
 /* Style the footer */
 .footer {
-  background-color:darkcyan;
+  background-color:white;
   padding: 10px;
 }
 .CS{
-  background-color:darkgray
+  background-color:white
 }
 
 p{

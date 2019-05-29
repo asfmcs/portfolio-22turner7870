@@ -1,0 +1,375 @@
+
+<html>
+<head>
+<title>Maze</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/a818e45667427600634e9e44b17902f1a5d48243/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Maze</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    
+function start(){
+    
+    var rect = new Rectangle(1000,1000);
+    rect.setPosition(0,0);
+    rect.setColor(Color.black);
+    add(rect);
+    
+    
+    drawPacman(150,150);
+    var centerX = getWidth()/2;
+    var centerY = getHeight()/2;
+    drawGhost(75,135, Color.red);
+    drawGhost(100,215, Color.cyan);
+    drawGhost(210,60, "#FF69B4");
+    drawGhost(250,390, Color.orange);
+    
+    drawFood(200,380, Color.yellow);
+    drawFood(230,380, Color.yellow);
+    drawFood(260,380, Color.yellow);
+    drawFood(290,380, Color.yellow);
+    drawFood(320,380, Color.yellow);
+    drawFood(350,380, Color.yellow);
+    drawFood(350,380, Color.yellow);
+    drawFood(350,380, Color.yellow);
+    drawFood(350,380, Color.yellow);
+    drawFood(350,380, Color.yellow);
+    drawFood(350,350, Color.yellow);
+    drawFood(350,320, Color.yellow);
+    drawFood(350,290, Color.yellow);
+    drawFood(350,260, Color.yellow);
+    drawFood(350,230, Color.yellow);
+    drawFood(350,200, Color.yellow);
+    drawFood(350,170, Color.yellow);
+    drawFood(350,140, Color.yellow);
+    drawFood(350,110, Color.yellow);
+    drawFood(350,80, Color.yellow);
+    drawFood(170,380, Color.yellow);
+    
+    
+    
+
+    
+    drawBox(140,125,"#082ed0");
+    drawBox(310,125,"#082ed0");
+
+    drawBoxx(119,120,"#082ed0");
+    drawBoxx(301,120,"#082ed0");
+
+
+
+    var line = new Line(125, 125, 298, 125);
+    line.setColor("#082ed0");
+    line.setLineWidth(2);
+    add(line);
+
+    var line = new Line(125, 190, 298, 190);
+    line.setColor("#082ed0");
+    line.setLineWidth(2);
+    add(line);
+
+    var linex = new Line(119, 120, 303, 120);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);
+
+    var linex = new Line(119, 195, 303, 195);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);
+
+    drawlines (190,0,"#082ed0");
+    drawlines (224,0,"#082ed0");
+
+
+     var linetop = new Line(190, 40, 225, 40);
+    linetop.setColor("#082ed0");
+    linetop.setLineWidth(2);
+    add(linetop);
+
+
+
+    var linel = new Line(125, 190, 298, 190);
+    linel.setColor("#082ed0");
+    linel.setLineWidth(2);
+    add(linel);
+
+    var linex = new Line(119, 120, 303, 120);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);
+
+    var linex = new Line(119, 195, 303, 195);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);
+
+
+
+
+
+
+
+
+     drawliness (30,200,"#082ed0");
+
+    var lineq = new Line(0, 200, 31, 200);
+    lineq.setColor("#082ed0");
+    lineq.setLineWidth(2);
+    add(lineq);
+
+     var linew = new Line(0, 290, 31, 290);
+    linew.setColor("#082ed0");
+    linew.setLineWidth(2);
+    add(linew);
+
+    drawlinesss (27,204,"#082ed0");
+
+    var linee = new Line(0, 204, 27, 204);
+    linee.setColor("#082ed0");
+    linee.setLineWidth(2);
+    add(linee);
+
+    var liner = new Line(0, 285, 27, 285);
+    liner.setColor("#082ed0");
+    liner.setLineWidth(2);
+    add(liner);
+
+
+
+
+    
+
+
+
+    drawliness (369,40,"#082ed0");
+
+    var linet = new Line(369, 40, 400, 40);
+    linet.setColor("#082ed0");
+    linet.setLineWidth(2);
+    add(linet);
+
+     var liney = new Line(369, 130, 400, 130);
+    liney.setColor("#082ed0");
+    liney.setLineWidth(2);
+    add(liney);
+
+    drawlinesss (373,44,"#082ed0");
+
+    var lineu = new Line(373, 44, 400, 44);
+    lineu.setColor("#082ed0");
+    lineu.setLineWidth(2);
+    add(lineu);
+
+    var linei = new Line(372, 125, 400, 125);
+    linei.setColor("#082ed0");
+    linei.setLineWidth(2);
+    add(linei);
+
+
+
+
+    drawBoxxxx(119,270,"#082ed0");
+
+
+
+    drawBoxxxx(303,270,"#082ed0"); 
+
+    var linex = new Line(119, 320, 303, 320);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);
+
+    var linex = new Line(119, 270, 303, 270);
+    linex.setColor("#082ed0");
+    linex.setLineWidth(2);
+    add(linex);   
+
+
+
+    drawlines (190,320,"#082ed0");
+    drawlines (224,320,"#082ed0");
+
+
+ var linetop = new Line(190, 360, 225, 360);
+    linetop.setColor("#082ed0");
+    linetop.setLineWidth(2);
+    add(linetop);
+
+    var linex = new Line(190, 320, 225, 320);
+    linex.setColor(Color.black);
+    linex.setLineWidth(2);
+    add(linex);
+
+    
+}
+
+function drawGhost(centerX, centerY, color){
+    var rect = new Rectangle (30,35);
+    rect.setPosition (centerX-15, centerY);
+    rect.setColor(color);
+    add (rect);
+    
+    var circle = new Circle (15);
+    circle.setPosition(centerX, centerY);
+    circle.setColor(color);
+    add (circle);
+    
+    var circle2 = new Circle(5);
+    circle2.setPosition(centerX, centerY+35);
+    circle2.setColor(color);
+    add (circle2);
+    
+    var circle3 = new Circle(5);
+    circle3.setPosition(centerX-10, centerY+35);
+    circle3.setColor(color);
+    add (circle3);
+    
+     var circle4 = new Circle(5);
+    circle4.setPosition(centerX+10, centerY+35);
+    circle4.setColor(color);
+    add (circle4);
+    
+    var circle5 = new Circle(5);
+    circle5.setPosition(centerX-5, centerY);
+    circle5.setColor(Color.white);
+    add (circle5);
+    
+     var circle6 = new Circle(5);
+    circle6.setPosition(centerX+9, centerY);
+    circle6.setColor(Color.white);
+    add (circle6);
+    
+     var circle7 = new Circle(2.5);
+    circle7.setPosition(centerX+10, centerY);
+    circle7.setColor(Color.blue);
+    add (circle7);
+    
+    var circle8 = new Circle(2.5);
+    circle8.setPosition(centerX-3, centerY);
+    circle8.setColor(Color.blue);
+    add (circle8);
+}
+function drawPacman (centerX,centerY,color){
+ var circle = new Circle(20);
+ 
+ circle.setPosition(150, 380);
+ 
+ circle.setColor(Color.yellow);
+ 
+ add(circle);
+
+
+var myArc = new Arc(60,-10, 40,0 );
+    myArc.setPosition(150,383);
+    myArc.setColor(Color.black);
+    add(myArc);
+}
+function drawMaze(){
+    var line = new Line(100, 100, 200, 200);
+    line.setColor(Color.blue);
+    line.setLineWidth(20);
+    line.setPosition(100, 100);
+    line.setEndpoint(200,100);
+    add(line);
+}  
+function drawFood(x,y,color){    
+    var food = new Circle (7);
+    food.setPosition(x,y);
+    food.setColor(Color.yellow);
+    add (food);
+
+
+}
+function drawBox(centerx,centery,color ){
+    var rect = new Rectangle(2,67);
+    rect.setPosition(centerx - 15, centery);
+    rect.setColor(color);
+    add(rect);
+}
+
+function drawlines(centerx,centery,color ){
+    var rect = new Rectangle(2,40);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+}
+
+function drawliness(centerx,centery,color ){
+    var rect = new Rectangle(2,90);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+}
+
+function drawlinesss(centerx,centery,color ){
+    var rect = new Rectangle(2,82);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+}
+
+function drawBoxx(centerx,centery,color ){
+    var rect = new Rectangle(2,75);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+}
+    function drawBoxx(centerx,centery,color ){
+    var rect = new Rectangle(2,75);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+
+}
+
+ function drawBoxxxx(centerx,centery,color ){
+    var rect = new Rectangle(2,50);
+    rect.setPosition(centerx, centery);
+    rect.setColor(color);
+    add(rect);
+
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
